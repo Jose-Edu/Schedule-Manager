@@ -21,6 +21,11 @@ class main:
         self.main_frame = tk.Frame(self.app, background='lightgray').pack(expand='True', fill='both')
         
 
+    def clean_window(self):
+        self.main_frame.destroy()
+        self.main_frame = tk.Frame(self.app, background='lightgray').pack(expand='True', fill='both')
+
+
 # Atribui a classe main à root, executa o mainloop do programa
 if __name__ == '__main__':
 
