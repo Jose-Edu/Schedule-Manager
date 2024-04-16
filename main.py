@@ -21,19 +21,18 @@ class main:
         self.app.title('Schedule Manager')
         self.app.geometry('800x600')
         self.main_frame = tk.Frame(self.app, background='lightgray').pack(expand='True', fill='both')
+
         # Criando o calendário
         self.calendar = Calendar.Calendar(self.main_frame, selectmode="day", date_pattern="dd/MM/yyyy")
         self.calendar.pack(side= "top", expand="true",fill="both", padx=20, pady=20)
         
 
-    def clean_window(self):
+    def clean_window(self) -> None:
         self.main_frame.destroy()
         self.main_frame = tk.Frame(self.app, background='lightgray').pack(expand='True', fill='both')
 
     
-
-
-# Atribui a classe main à root, executa o mainloop do programa
+# Atribui a classe main à root. Executa o mainloop do programa
 if __name__ == '__main__':
 
     root = main()
